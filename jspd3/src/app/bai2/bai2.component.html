@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <h3>In câu chào</h3>
+  <form (submit)="onSubmit(HelloForm)" #HelloForm="ngForm">
+    <label>Nhập tên: </label>
+    <input type="text" ngModel name="hoten" /><br /> <br />
+    <input type="submit" value="In Câu Chào" />
+  </form>
+  <p *ngIf="name!=''">
+    Câu chào: <strong>Chào bạn {{ name }}</strong>
+  </p>
+</div>

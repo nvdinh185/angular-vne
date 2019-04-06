@@ -1,0 +1,4 @@
+<input placeholder="Enter your username" [(ngModel)]="name">
+<h3 [ngStyle]="name.length%2==0? evenStyle : oddStyle">Your name is {{ name }}</h3>
+<p>..............</p>
+<div [ngClass]="{ circle : isHighLight, square : !isHighLight }"></div>

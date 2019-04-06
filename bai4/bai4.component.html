@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <h2>Mobifone</h2>
+  <form (submit)="onSubmit(MuaHoaForm)" #MuaHoaForm="ngForm">
+    <label>ID:</label>
+    <input ngModel name="id" #txtID="ngModel" required />
+    <span *ngIf="txtID.touched && txtID.errors?.required">
+      Yêu cầu nhập!
+    </span>
+    <br /> <br />
+    <label>Tên:</label>
+    <input ngModel name="ten" #txtTen="ngModel" required />
+    <span *ngIf="txtTen.touched && txtTen.errors?.required">
+      Yêu cầu nhập!
+    </span>
+    <br /><br />
+    <label>Số lượng:</label>
+    <input ngModel name="soluong" #txtSoLuong="ngModel" required />
+    <span *ngIf="txtSoLuong.touched && txtSoLuong.errors?.required">
+      Yêu cầu nhập!
+    </span>
+    <br /><br />
+    <label>Giá bán:</label>
+    <input ngModel name="gia" #txtGia="ngModel" required />
+    <span *ngIf="txtGia.touched && txtGia.errors?.required">
+      Yêu cầu nhập!
+    </span>
+    <br /><br />
+    <div ngModelGroup="hoa">
+      <label><input type="checkbox" ngModel name="kyniem">Hoa ky niem</label>
+      <label><input type="checkbox" ngModel name="tinhyeu">Hoa tinh yeu</label>
+      <label><input type="checkbox" ngModel name="hanhphuc">Hoa hanh phuc</label>
+    </div>
+    <input [disabled]="MuaHoaForm.invalid" type="submit" value="Mua hoa" />
+  </form>
+</div>
