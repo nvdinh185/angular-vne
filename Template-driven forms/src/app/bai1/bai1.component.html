@@ -1,0 +1,11 @@
+<h4>Hình chữ nhật</h4>
+<form (submit)="onSubmit(HCNForm)" #HCNForm="ngForm">
+  <label>Chiều dài: </label>
+  <input type="text" ngModel name="chieudai" /><br /> <br />
+  <label>Chiều rộng: </label>
+  <input type="text" ngModel name="chieurong" /><br /> <br />
+  <p>{{ getMessage(HCNForm) }}</p>
+  <input type="submit" value="Tính" [disabled]="!check" />
+  <h4 *ngIf="chuVi!=undefined">Chu vi: {{chuVi}}</h4>
+  <h4 *ngIf="dienTich!=undefined">Diện tích: {{dienTich}}</h4>
+</form>
